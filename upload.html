@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Upload Addon | MCPEDLV5</title>
+
+<link rel="stylesheet" href="upload.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background">
+    <div class="blur blur1"></div>
+    <div class="blur blur2"></div>
+</div>
+
+<nav>
+
+<div class="logo">
+<i class="fa-solid fa-cube"></i>
+<h2>MCPEDLV5</h2>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#">Explore</a></li>
+<li><a href="#">Profile</a></li>
+<li><a href="#">Settings</a></li>
+</ul>
+
+</nav>
+
+<section class="upload-page">
+
+<div class="upload-card">
+
+<h1>Upload Minecraft Addon</h1>
+
+<p>
+Share your addon with everyone around the world.
+</p>
+
+<form id="uploadForm">
+
+<div class="input-group">
+
+<label>Addon Name</label>
+
+<input
+type="text"
+id="addonName"
+placeholder="Example : Actions & Stuff">
+
+</div>
+
+<div class="input-group">
+
+<label>Description</label>
+
+<textarea
+id="description"
+placeholder="Write your addon description..."></textarea>
+
+</div>
+
+<div class="input-group">
+
+<label>Category</label>
+
+<select id="category">
+
+<option>Adventure</option>
+<option>Texture Pack</option>
+<option>Shader</option>
+<option>Animation</option>
+<option>Utility</option>
+<option>Survival</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Thumbnail Image</label>
+
+<input
+type="file"
+id="thumbnail"
+accept="image/*">
+
+</div>
+
+<div class="input-group">
+
+<label>Addon File</label>
+
+<input
+type="file"
+id="addonFile"
+accept=".mcpack,.mcaddon,.zip">
+
+</div>
+
+<button
+type="submit"
+id="uploadButton">
+
+<i class="fa-solid fa-cloud-arrow-up"></i>
+
+Upload Addon
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<script type="module" src="firebase.js"></script>
+
+<script type="module" src="upload.js"></script>
+
+</body>
+
+</html>

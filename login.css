@@ -1,0 +1,302 @@
+/* =========================================
+   MCPEDLV5 LOGIN CSS
+   PART 1
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0d1117;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:white;
+}
+
+/* Background */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.blur{
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    filter:blur(140px);
+    opacity:.35;
+    animation:float 7s ease-in-out infinite;
+}
+
+.blur.one{
+    background:#00e5ff;
+    top:-100px;
+    left:-120px;
+}
+
+.blur.two{
+    background:#7c4dff;
+    bottom:-120px;
+    right:-120px;
+    animation-delay:2s;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-25px);
+    }
+}
+
+/* Login Container */
+
+.login-container{
+    width:100%;
+    max-width:470px;
+    margin:20px;
+    padding:35px;
+    border-radius:28px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.4),
+        0 0 40px rgba(0,229,255,.15);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.logo i{
+    font-size:38px;
+    color:#00e5ff;
+}
+
+.logo h1{
+    font-size:34px;
+    font-weight:800;
+}
+
+.login-container h2{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.login-container p{
+    text-align:center;
+    color:#bdbdbd;
+    line-height:1.7;
+    margin-bottom:28px;
+}
+
+.login-card{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.divider{
+    text-align:center;
+    color:#888;
+    position:relative;
+}
+
+.divider::before,
+.divider::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:40%;
+    height:1px;
+    background:rgba(255,255,255,.15);
+}
+
+.divider::before{
+    left:0;
+}
+
+.divider::after{
+    right:0;
+}
+/* =========================================
+   MCPEDLV5 LOGIN CSS
+   PART 2
+========================================= */
+
+/* Google Login Button */
+
+#googleLogin{
+    width:100%;
+    padding:16px 20px;
+    border:none;
+    border-radius:16px;
+    cursor:pointer;
+    background:linear-gradient(135deg,#00e5ff,#7c4dff);
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    transition:.35s;
+    box-shadow:0 0 20px rgba(0,229,255,.35);
+}
+
+#googleLogin:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 35px rgba(0,229,255,.65);
+}
+
+#googleLogin i{
+    font-size:22px;
+}
+
+/* Guest Button */
+
+.guest{
+    width:100%;
+    padding:16px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.05);
+    color:#fff;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.guest:hover{
+    background:rgba(255,255,255,.12);
+}
+
+/* Features */
+
+.features{
+    margin-top:35px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.item{
+    text-align:center;
+    padding:18px 10px;
+    border-radius:18px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    transition:.35s;
+}
+
+.item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(124,77,255,.35);
+}
+
+.item i{
+    font-size:28px;
+    color:#00e5ff;
+    margin-bottom:10px;
+}
+
+.item h3{
+    font-size:17px;
+    margin-bottom:8px;
+}
+
+.item p{
+    font-size:13px;
+    color:#bdbdbd;
+    margin:0;
+}
+
+/* Animation */
+
+.login-container{
+    animation:loginFade .8s ease;
+}
+
+@keyframes loginFade{
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.96);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.login-container{
+    margin:15px;
+    padding:28px;
+}
+
+.logo h1{
+    font-size:28px;
+}
+
+.login-container h2{
+    font-size:24px;
+}
+
+.features{
+    grid-template-columns:1fr;
+}
+
+.item{
+    padding:20px;
+}
+
+}
+
+@media(max-width:480px){
+
+body{
+    padding:15px;
+}
+
+.login-container{
+    padding:22px;
+}
+
+#googleLogin,
+.guest{
+    font-size:15px;
+    padding:15px;
+}
+
+.logo i{
+    font-size:32px;
+}
+
+.logo h1{
+    font-size:24px;
+}
+
+}

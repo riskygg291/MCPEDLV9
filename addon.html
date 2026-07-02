@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Addon Detail | MCPEDLV5</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<nav>
+
+<div class="logo">
+<i class="fa-solid fa-cube"></i>
+<h2>MCPEDLV5</h2>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="upload.html">Upload</a></li>
+<li><a href="#">Settings</a></li>
+</ul>
+
+</nav>
+
+<!-- ADDON DETAIL -->
+<section class="addon-detail">
+
+<div class="addon-card-detail">
+
+<!-- THUMBNAIL -->
+<img id="addonImage" src="" alt="Addon Image">
+
+<!-- INFO -->
+<h1 id="addonTitle">Addon Name</h1>
+
+<p id="addonDesc">Description here...</p>
+
+<div class="addon-meta">
+<span id="addonCategory">Category</span>
+</div>
+
+<!-- DOWNLOAD -->
+<a id="downloadBtn" href="#" target="_blank">
+<i class="fa-solid fa-download"></i> Download
+</a>
+
+</div>
+
+<!-- RATING -->
+<div class="rating-box">
+
+<h2>Rating</h2>
+
+<div id="stars">
+<span class="star">★</span>
+<span class="star">★</span>
+<span class="star">★</span>
+<span class="star">★</span>
+<span class="star">★</span>
+</div>
+
+</div>
+
+<!-- COMMENT -->
+<div class="comment-section">
+
+<h2>Comments</h2>
+
+<form id="commentForm">
+
+<input type="text" id="commentInput" placeholder="Write a comment...">
+
+<button type="submit">Send</button>
+
+</form>
+
+<div id="commentList"></div>
+
+</div>
+
+</section>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="addon.js"></script>
+
+</body>
+</html>

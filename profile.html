@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profile | MCPEDLV5</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+<i class="fa-solid fa-cube"></i>
+<h2>MCPEDLV5</h2>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="upload.html">Upload</a></li>
+</ul>
+
+</nav>
+
+<section class="profile">
+
+<div class="profile-card">
+
+<img id="profilePic" src="" alt="profile">
+
+<h1 id="profileName">User</h1>
+
+<p id="profileEmail">email</p>
+
+<button id="logoutBtn">Logout</button>
+
+</div>
+
+<div class="my-addons">
+
+<h2>My Uploads</h2>
+
+<div id="myAddonList"></div>
+
+</div>
+
+</section>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="profile.js"></script>
+
+</body>
+</html>
